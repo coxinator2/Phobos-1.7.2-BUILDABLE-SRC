@@ -33,16 +33,16 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
 
-@Mod(modid="earthhack", name="3arthh4ck", version="1.7.2")
+@Mod(modid="earthhack", name="CoxHack", version="1.6.9")
 public class Phobos {
-    public static final String MODID = "earthhack";
-    public static final String MODNAME = "3arthh4ck";
-    public static final String MODVER = "1.7.2";
+    public static final String MODID = "coxhack";
+    public static final String MODNAME = "coxhack";
+    public static final String MODVER = "1.6.9";
     public static final String NAME_UNICODE = "3\u1d00\u0280\u1d1b\u029c\u029c4\u1d04\u1d0b";
     public static final String PHOBOS_UNICODE = "\u1d18\u029c\u1d0f\u0299\u1d0f\ua731";
     public static final String CHAT_SUFFIX = " \u23d0 3\u1d00\u0280\u1d1b\u029c\u029c4\u1d04\u1d0b";
     public static final String PHOBOS_SUFFIX = " \u23d0 \u1d18\u029c\u1d0f\u0299\u1d0f\ua731";
-    public static final Logger LOGGER = LogManager.getLogger((String)"3arthh4ck");
+    public static final Logger LOGGER = LogManager.getLogger((String)"coxhack");
     public static ModuleManager moduleManager;
     public static SpeedManager speedManager;
     public static PositionManager positionManager;
@@ -71,25 +71,16 @@ public class Phobos {
     @Mod.Instance
     public static Phobos INSTANCE;
 
-    @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-        LOGGER.info("ohare is cute!!!");
-        LOGGER.info("faggot above - 3vt");
-        LOGGER.info("megyn wins again");
-        LOGGER.info("gtfo my logs - 3arth");
-        LOGGER.info("hqrion is chad");
-        LOGGER.info("ciruu is epic :o");
-    }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         customMainScreen = new GuiCustomMainScreen();
-        Display.setTitle("3arthh4ck - v.1.7.2");
+        Display.setTitle("CoxHack - v.1.6.9");
         Phobos.load();
     }
 
     public static void load() {
-        LOGGER.info("\n\nLoading 3arthh4ck 1.7.2");
+        LOGGER.info("\n\nLoading coxhack 1.6.9");
         unloaded = false;
         if (reloadManager != null) {
             reloadManager.unload();
@@ -130,11 +121,11 @@ public class Phobos {
             DiscordPresence.start();
         }
         cosmeticsManager = new CosmeticsManager();
-        LOGGER.info("3arthh4ck initialized!\n");
+        LOGGER.info("coxhack initialized!\n");
     }
 
     public static void unload(boolean unload) {
-        LOGGER.info("\n\nUnloading 3arthh4ck 1.7.2");
+        LOGGER.info("\n\nUnloading coxhack 1.6.9");
         if (unload) {
             reloadManager = new ReloadManager();
             reloadManager.init(commandManager != null ? commandManager.getPrefix() : ".");
@@ -162,7 +153,7 @@ public class Phobos {
         inventoryManager = null;
         notificationManager = null;
         safetyManager = null;
-        LOGGER.info("3arthh4ck unloaded!\n");
+        LOGGER.info("coxhack unloaded!\n");
     }
 
     public static void reload() {
